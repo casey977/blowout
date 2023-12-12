@@ -11,7 +11,7 @@ const rate_limit = require('express-rate-limit');
 
 // Settings...
 
-const login_limits = rate_limit({
+const req_limits = rate_limit({
     windowMs: 10 * 60 * 1000,
     max: 20,
     standardHeaders: false,
@@ -29,6 +29,7 @@ console.error = function() {}; */
 
 // Routes/modules...
 
+app.use(req_limits);
 app.use(helmet);
 app.use(express.json());
 app.use(cookie_parser());
