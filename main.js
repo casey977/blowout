@@ -6,3 +6,5 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(helmet);
+
+server.listen();
