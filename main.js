@@ -23,7 +23,12 @@ app.use(helmet);
 app.use(express.json());
 app.use(cookie_parser());
 
+// Start the server...
+
 server.listen(
     process.env.APP_PORT,
     () => {console.log(`Server is running on port ${process.env.APP_PORT}.`)}
 );
+
+// Start the websockets...
+
