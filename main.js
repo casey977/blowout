@@ -13,6 +13,7 @@ const server = http.createServer(app);
 console.error = function() {}; */
 
 app.use(helmet);
+app.use(express.json());
 
 server.listen(
     process.env.APP_PORT,
