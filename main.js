@@ -12,6 +12,8 @@ const server = http.createServer(app);
 /* console.log = function() {};
 console.error = function() {}; */
 
+// Routes/modules...
+
 app.use(helmet);
 app.use(express.json());
 app.use(cookie_parser());
