@@ -20,7 +20,6 @@ console.error = function() {}; */
 // Routes/modules...
 
 app.use(helmet);
-app.use(express.static('public'));
 app.use(express.json());
 app.use(cookie_parser());
 
