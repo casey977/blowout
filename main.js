@@ -11,7 +11,12 @@ const rate_limit = require('express-rate-limit');
 
 // Settings...
 
-
+const login_limits = rate_limit({
+    windowMs: 10 * 60 * 1000,
+    max: 20,
+    standardHeaders: false,
+    legacyHeaders: false
+});
 
 // Setup...
 
