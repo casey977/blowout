@@ -5,8 +5,11 @@ const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
 const cookie_parser = require('cookie-parser');
+
+// Setup...
+
 const app = express();
-const server = http.createServer(app);
+const server = http.createServer(app); // Remember to change to HTTPS in the future.
 
 // Uncomment for console reports...
 /* console.log = function() {};
@@ -15,6 +18,7 @@ console.error = function() {}; */
 // Routes/modules...
 
 app.use(helmet);
+app.use(express.static('public'));
 app.use(express.json());
 app.use(cookie_parser());
 
