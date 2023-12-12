@@ -14,6 +14,7 @@ console.error = function() {}; */
 
 app.use(helmet);
 app.use(express.json());
+app.use(cookie_parser());
 
 server.listen(
     process.env.APP_PORT,
